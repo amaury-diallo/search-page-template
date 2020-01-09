@@ -7,18 +7,31 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>Search results page</title>
   </head>
   <body>
+    <header class="px-3 px-sm-5 py-3 head">
+      <div class="logo">
+        <img src="ceni-logo.png" alt="">
+      </div>
+      <div class="year text-uppercase text-center">
+        <div class="title">Vérification</div>
+        <div class="date">Liste 2020</div>
+      </div>
+    </header>
     <div class="container py-4">
       <div class="row">
-        <form class="form-inline col-8 offset-2">
-          <input type="text" class="form-control mb-2 mr-sm-2 col-9" id="search-field" placeholder="Nom / prenom ">
-          <button type="submit" class="btn btn-primary mb-2 col-2">Rechercher</button>
+        <form class="form-inline col-12 search-form p-3 pl-5 py-4" id="search-form">
+          <input type="text" class="form-control mb-2 mr-sm-2 col-sm-2" id="search-field" placeholder="Nom">
+          <input type="text" class="form-control mb-2 mr-sm-2 col-sm-2" id="search-field" placeholder="Prénom ">
+          <input type="text" class="form-control mb-2 mr-sm-2 col-sm-2" id="search-field" placeholder="Nom du père">
+          <input type="text" class="form-control mb-2 mr-sm-2 col-sm-2" id="search-field" placeholder="Nom de la mère ">
+          <button type="submit" class="btn btn-primary mb-2 col-sm-3">Rechercher</button>
         </form>
       </div>
-      <div class="row d-flex justify-content-center mt-4" id="alert-notfound">
+<!--       <div class="row d-flex justify-content-center mt-4" id="alert-notfound">
         <div class="col-6 ofset-3">
           <div class="alert alert-danger text-center" role="alert">
             Aucun élément correspondant n'a été trouvé  
@@ -31,29 +44,53 @@
             5 éléments trouvés  
           </div>
         </div>
-      </div>
-      <div class="row" id="loader-wrapper">
-        <div class="col-12 mt-5">
+      </div> -->
+<!--       <div class="row" id="loader-wrapper">
+        <div class="col-12 mt-1">
           <div class="d-flex justify-content-center">
-            <div class="lds-ripple"><div></div><div></div></div>
+            <div class="loader">Loading...</div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="row" id="results-wrapper">
-        <hr class="col-12">
+        <hr class="col-11">
         <div class="col-12 results">
-          <div class="card result-item">
+          <div class="card result-item" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="50">
             <div class="card-body row">
-              <div class="col-sm-4">
+              <div class="col-sm-4 mb-3">
                 <label class="h6">Nom</label>
                 <input type="text" class="form-control" readonly value="Diallo">
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-4 mb-3">
                 <label class="h6">Prénom</label>
                 <input type="text" class="form-control" readonly value="Amadou Oury">
               </div>
-              <div class="col-sm-4">
-                <label class="h6">Email</label>
+              <div class="col-sm-4 mb-3">
+                <label class="h6">Nom du père</label>
+                <input type="text" class="form-control" readonly value="amadoudial@oury.com">
+              </div>
+              <div class="col-sm-4 mb-3">
+                <label class="h6">Nom de la mère</label>
+                <input type="text" class="form-control" readonly value="Diallo">
+              </div>
+              <div class="col-sm-4 mb-3">
+                <label class="h6">Région</label>
+                <input type="text" class="form-control" readonly value="Amadou Oury">
+              </div>
+              <div class="col-sm-4 mb-3">
+                <label class="h6">Préfecture</label>
+                <input type="text" class="form-control" readonly value="amadoudial@oury.com">
+              </div>
+              <div class="col-sm-4 mb-3">
+                <label class="h6">Commune</label>
+                <input type="text" class="form-control" readonly value="amadoudial@oury.com">
+              </div>
+              <div class="col-sm-4 mb-3">
+                <label class="h6">District</label>
+                <input type="text" class="form-control" readonly value="amadoudial@oury.com">
+              </div>
+              <div class="col-sm-4 mb-3">
+                <label class="h6">Secteur</label>
                 <input type="text" class="form-control" readonly value="amadoudial@oury.com">
               </div>
             </div>
@@ -65,5 +102,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({once:true});
+    </script>
   </body>
 </html>
