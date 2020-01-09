@@ -18,17 +18,22 @@
       </div>
       <div class="year text-uppercase text-center">
         <div class="title">Vérification</div>
-        <div class="date">Liste 2020</div>
+        <div class="date">Liste électorale 2020</div>
       </div>
     </header>
     <div class="container py-4">
       <div class="row">
-        <form class="form-inline col-12 search-form p-3 pl-sm-5 py-4" id="search-form">
+        <form class="form-inline col-12 search-form p-3 pl-sm-5 pb-4 " id="search-form">
+          <div class="mb-2 col-12 pl-0">
+            <small class="help-text">
+              <strong class="pr-1">*</strong>Tous les champs sont obligatoires
+            </small>
+          </div>
           <input type="text" class="form-control mb-2 mr-sm-2 col-sm-2" id="search-field" placeholder="Nom">
           <input type="text" class="form-control mb-2 mr-sm-2 col-sm-2" id="search-field" placeholder="Prénom ">
           <input type="text" class="form-control mb-2 mr-sm-2 col-sm-2" id="search-field" placeholder="Nom du père">
           <input type="text" class="form-control mb-2 mr-sm-2 col-sm-2" id="search-field" placeholder="Nom de la mère ">
-          <button type="submit" class="btn btn-primary mb-2 col-sm-3">Rechercher</button>
+          <button type="submit" class="btn btn-primary mb-2 col-sm-3" disabled>Rechercher</button>
         </form>
       </div>
 <!--       <div class="row d-flex justify-content-center mt-4" id="alert-notfound">
@@ -52,7 +57,7 @@
           </div>
         </div>
       </div> -->
-<!--       <div class="row" id="results-wrapper">
+      <div class="row" id="results-wrapper">
         <hr class="col-11">
         <div class="col-12 results">
           <div class="card result-item" data-aos="fade-up" data-aos-duration="1300" data-aos-delay="50">
@@ -96,7 +101,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
